@@ -13,6 +13,9 @@ const OrderSchema = new mongoose.Schema({
   address: {
     type: String
   },
+  phoneNumber: {
+    type: String
+  },
   cart: [{
     productID: {
       type: mongoose.Types.ObjectId,
@@ -47,7 +50,8 @@ const OrderSchema = new mongoose.Schema({
       type: Number,
       default: 1
     }
-  }]
+  }],
+  createAt: Date
 },
   {
     collection: 'Order'
